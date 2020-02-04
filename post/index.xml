@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Clément Violet</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 08 Sep 2019 19:07:59 +0200</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>Gapminder: A New Hope</title>
+      <link>/2019/09/08/gapminder-a-new-hope/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/2019/09/08/gapminder-a-new-hope/</guid>
+      <description>
+
+
+&lt;p&gt;This week was important to me, because I have started a new Master’s degree in Ecological Modelling. I will do a lot stats, modelling and data visualisation so it was important to me to pay a tribute to someone that really inspired me: &lt;a href=&#34;https://en.wikipedia.org/wiki/Hans_Rosling&#34;&gt;Hans Roseling&lt;/a&gt;. &lt;!-- Vérifier la traduction de la dernière phrase !--&gt;&lt;/p&gt;
+&lt;p&gt;A quick recap onto his biography: Hans Roseling was a Swedish MD and more important to me, a statistician (in fact he was an epidemiologist, but they are doing a lot of stats) and a sword swallower. He started a foundation which aims to help people to a better understanding of statistics.&lt;/p&gt;
+One day during my BSc, I have found one his Ted talk titled: &lt;em&gt;The best stats you’ve ever seen&lt;/em&gt;. This talk changed the way that I am looking at the world. It has made me more optimistic about future of our species, even if we have a tremendous number of challenges to face off. If you have not watched one of his talks, stop everything and watch it!
+&lt;br&gt;&lt;/br&gt;
+&lt;div style=&#34;max-width:854px&#34;&gt;
+&lt;div style=&#34;position:relative;height:0;padding-bottom:56.25%&#34;&gt;
+&lt;iframe src=&#34;https://embed.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34; width=&#34;854&#34; height=&#34;480&#34; style=&#34;position:absolute;left:0;top:0;width:100%;height:100%&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+His conference totaly blowed my mind. If you liked it too, you should watch one of his documentary: &lt;em&gt;Don’t Panic - The Truth about Population&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Since this, I know that I want to use stats to better understand our world. Sure, I still passionate with marine sciences. That’s why I want to use statistical methods to get insight into how the marine communities work.&lt;/p&gt;
+&lt;p&gt;Thus, I am starting, a new Master’s degree. That’s why, I would like to pay a tribute to Hans Roseling. What a better way than using some of his data from Gapminder and making cool animated graphics?&lt;/p&gt;
+&lt;p&gt;o let’s go! I have already tidy a new dataset based on the brilliant Jennifer Bryan &lt;a href=&#34;https://github.com/jennybc/gapminder&#34;&gt;&lt;em&gt;gapminder&lt;/em&gt;&lt;/a&gt; R package. It will be the occasion to show off some &lt;code&gt;gganimate&lt;/code&gt; features!&lt;/p&gt;
+&lt;p&gt;First of all, I load some convinient libraries and my own version of &lt;code&gt;gapminder&lt;/code&gt; dataset.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(gganimate)
+
+theme_set(theme_bw())
+
+load(&amp;quot;gapminder_data.RData&amp;quot;)
+
+glimpse(gapminder)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Observations: 39,928
+## Variables: 8
+## $ country   &amp;lt;fct&amp;gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan, Afghani…
+## $ continent &amp;lt;fct&amp;gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia,…
+## $ year      &amp;lt;dbl&amp;gt; 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809,…
+## $ fertility &amp;lt;dbl&amp;gt; 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,…
+## $ childMort &amp;lt;dbl&amp;gt; 469, 469, 469, 469, 469, 469, 470, 470, 470, 470, 470, 470,…
+## $ lifeExp   &amp;lt;dbl&amp;gt; 28.2, 28.2, 28.2, 28.2, 28.2, 28.2, 28.1, 28.1, 28.1, 28.1,…
+## $ pop       &amp;lt;dbl&amp;gt; 3280000, 3280000, 3280000, 3280000, 3280000, 3280000, 32800…
+## $ gdpPercap &amp;lt;dbl&amp;gt; 603, 603, 603, 603, 603, 603, 603, 603, 603, 603, 604, 604,…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This new dataset has two new variables:
+- &lt;code&gt;childMort&lt;/code&gt; the number of deaths of children under 5 years per 1,000 births;
+- &lt;code&gt;fertility&lt;/code&gt; the number of children per woman.&lt;/p&gt;
+&lt;p&gt;Let’s do some animated plots! First, I want to plot one of the most famous animated plots, let’s start with life expectancy against the income.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_1 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_x_log10() +
+  scale_size(name = &amp;quot;Population&amp;quot;) +
+  labs(x = &amp;quot;log10($ GDP per capita)&amp;quot;,
+       y = &amp;quot;Life expectancy&amp;quot;,
+       title = paste(&amp;quot;Life expectancy ~ log10($ GPD per capita) - Year:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_1, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- Vérifier la traduction de ce paragraphe 
+Pour animer le graphique, j&#39;utilise simplement la fonction `gganimate::transition_time()` qui permet d&#39;animer le graphique pour chaque valeur de la variable `gapminder$year`. De plus cette fonction donne accès à une nouvelle variable `frame_time` qui permet de savoir quelle valeur de `gapminder$year` est actuellement affiché à l&#39;écran. J&#39;utilise cette variable dans la fonction `ggplot2::title()`. Pour animer le tout, j&#39;utilise la fonction `gganimate::animate()` qui prend comme argument un objet `gganim` et qui me permet de choisir le nombre d&#39;images par seconde affiché dans le rendu final.
+!--&gt;
+&lt;p&gt;For animated the plot, I just use the &lt;code&gt;gganimate::transition_time()&lt;/code&gt; which to create a frame for each value of the &lt;code&gt;gapminder$year&lt;/code&gt; variable. Moreover, this function grant me access to a new varibale &lt;code&gt;frame_time&lt;/code&gt; which allow me to know which value of &lt;code&gt;gapminder$year&lt;/code&gt; is currently print. I use this new variable in the &lt;code&gt;ggplot2::title()&lt;/code&gt; function. Then, I use &lt;code&gt;gganimate::animate()&lt;/code&gt; which use as first argument a &lt;code&gt;gganim&lt;/code&gt; object and I can set the number of frame per second to animate the whole.&lt;/p&gt;
+&lt;p&gt;Now, what’s about the the fertility against the income?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_2 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = fertility)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size(name = &amp;quot;Population&amp;quot;) +(name = &amp;quot;Population&amp;quot;) +
+  scale_x_log10() +
+  labs(x = &amp;quot;log10($ GDP per capita)&amp;quot;,
+       y = &amp;quot;# Children per woman&amp;quot;,
+       title = paste(&amp;quot;Fertily ~ log10($ GDP per capita) - Year:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_1, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fantastic! The fertility keep decreasing and decreasing! Are we still expecting the &lt;em&gt;Population Bomb&lt;/em&gt;? Now let’s look at the child mortality as function of GDP.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_3 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = childMort)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size(name = &amp;quot;Population&amp;quot;) +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(x = &amp;quot;log10($ GDP per capita)&amp;quot;,
+       y = &amp;quot;log10(Child mortality)&amp;quot;,
+       title = paste(&amp;quot;log10(Child mortality) ~ log10($ GDP per capita) - Year:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_3, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More and more plots are possible. With &lt;code&gt;gganimate&lt;/code&gt;, few lines are enough to animate data and thanks Hans Roseling too!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

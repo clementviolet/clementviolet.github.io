@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Clément Violet</title>
+    <link>/fr/publication/</link>
+      <atom:link href="/fr/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 07 Apr 2999 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Publications</title>
+      <link>/fr/publication/</link>
+    </image>
+    
+    <item>
+      <title>An example preprint / working paper</title>
+      <link>/fr/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2999 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/preprint/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Environmental biases in the study of ecological networks at the planetary scale</title>
+      <link>/fr/publication/ms_mangal_synth/poisot_2020/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/ms_mangal_synth/poisot_2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rmangal: An R package to interact with Mangal database</title>
+      <link>/fr/publication/rmangal_package/vissault_2019/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/rmangal_package/vissault_2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/fr/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/journal-article/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/fr/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/conference-paper/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

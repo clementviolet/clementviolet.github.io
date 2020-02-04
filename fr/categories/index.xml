@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories | Clément Violet</title>
+    <link>/fr/categories/</link>
+      <atom:link href="/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 08 Sep 2019 19:07:59 +0200</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Categories</title>
+      <link>/fr/categories/</link>
+    </image>
+    
+    <item>
+      <title>Dataviz</title>
+      <link>/fr/categories/dataviz/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/categories/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/fr/categories/r/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demo</title>
+      <link>/fr/categories/demo/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/fr/categories/demo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

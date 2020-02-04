@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contents | Clément Violet</title>
+    <link>/fr/content/</link>
+      <atom:link href="/fr/content/index.xml" rel="self" type="application/rss+xml" />
+    <description>Contents</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 08 Sep 2019 19:03:43 +0200</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Contents</title>
+      <link>/fr/content/</link>
+    </image>
+    
+    <item>
+      <title>2019 09 08 Gapminder a New Hope</title>
+      <link>/fr/content/post/en/2019-09-08-gapminder-a-new-hope/</link>
+      <pubDate>Sun, 08 Sep 2019 19:03:43 +0200</pubDate>
+      <guid>/fr/content/post/en/2019-09-08-gapminder-a-new-hope/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

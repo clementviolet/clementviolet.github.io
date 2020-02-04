@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gganimate | Clément Violet</title>
+    <link>/fr/tags/gganimate/</link>
+      <atom:link href="/fr/tags/gganimate/index.xml" rel="self" type="application/rss+xml" />
+    <description>gganimate</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 08 Sep 2019 19:07:59 +0200</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>gganimate</title>
+      <link>/fr/tags/gganimate/</link>
+    </image>
+    
+    <item>
+      <title>Gapminder : Un nouvel espoir</title>
+      <link>/fr/2019/09/08/gapminder-un-nouvel-espoir/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/2019/09/08/gapminder-un-nouvel-espoir/</guid>
+      <description>
+
+
+&lt;p&gt;Cette semaine a été importante pour moi, parce que j’ai commencé un nouveau Master en Modélisation en Ecologie, donc c’était important pour moi de rendre hommage à quelqu’un qui m’a inspiré : &lt;a href=&#34;https://en.wikipedia.org/wiki/Hans_Rosling&#34;&gt;Hans Roseling&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Un bref résumé de sa biographie : Hans Roseling était un médecin suédois et plus important pour moi, un statisticien (en fait il était épidémiologiste, mais ils font beaucoup de statistiques) et un avaleur de sabre. Il a également créé une fondation qui vise à aider les gens à mieux comprendre les statistiques.&lt;/p&gt;
+Un jour, pendant ma Licence, je suis tombé sur un de ses Ted Talk intitulé : &lt;em&gt;The best stats you’ve ever seen&lt;/em&gt; (NDT : &lt;em&gt;Les meilleures stats que vous ayez jamais vues&lt;/em&gt;) &lt;!-- Voir si je ne rajoute pas cette partie en pied de page !--&gt;. Cet conférence a changé ma façon de voir le monde. Cela m’a rendu plus optimiste quant à l’avenir de notre espèce, même si nous avons un nombre énorme de défis à relever. Si vous n’avez pas regardé une de ses conférences, arrêtez tout et regardez en une !
+&lt;br&gt;&lt;/br&gt;
+&lt;div style=&#34;max-width:854px&#34;&gt;
+&lt;div style=&#34;position:relative;height:0;padding-bottom:56.25%&#34;&gt;
+&lt;iframe src=&#34;https://embed.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34; width=&#34;854&#34; height=&#34;480&#34; style=&#34;position:absolute;left:0;top:0;width:100%;height:100%&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+Sa conférence m’a complètement époustouflé. Si vous l’avez aimé aussi, vous devriez regarder un de ses documentaires : &lt;em&gt;Don’t Panic - The Truth about Population&lt;/em&gt; (NDT : &lt;em&gt;Ne Paniquez Pas - La vérité sur la Population&lt;/em&gt;). &lt;!-- Voir si je ne rajoute pas cette partie en pied de page !--&gt;&lt;/p&gt;
+&lt;p&gt;Depuis, je sais que je veux utiliser les statistiques pour mieux comprendre notre monde. Bien sûr, je suis toujours passionné par les sciences de la mer. C’est pourquoi je veux utiliser des méthodes statistiques pour mieux comprendre le fonctionnement des communautés marines.&lt;/p&gt;
+&lt;p&gt;C’est ainsi que j’entame un nouveau master en modélisation. C’est pourquoi je voudrais rendre hommage à Hans Roseling. Quoi de mieux que d’utiliser certaines de ses données de Gapminder et de faire des graphiques animés cool ?&lt;/p&gt;
+&lt;p&gt;Alors c’est parti ! J’ai déjà préparé un nouvel ensemble de données inspiré par le brillant package R de Jennifer Bryan &lt;a href=&#34;https://github.com/jennybc/gapminder&#34;&gt;&lt;em&gt;gapminder&lt;/em&gt;&lt;/a&gt;. Ce sera l’occasion de mettre en valeur quelques fonctionnalités de &lt;code&gt;gganimate&lt;/code&gt; !&lt;/p&gt;
+&lt;p&gt;Tout d’abord, je charge quelques &lt;code&gt;library&lt;/code&gt; pratiques et ma propre version du jeu de données &lt;code&gt;gapminder&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(gganimate)
+
+theme_set(theme_bw())
+
+load(&amp;quot;gapminder_data.RData&amp;quot;)
+
+glimpse(gapminder)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Observations: 39,928
+## Variables: 8
+## $ country   &amp;lt;fct&amp;gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan, Afghani…
+## $ continent &amp;lt;fct&amp;gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia,…
+## $ year      &amp;lt;dbl&amp;gt; 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809,…
+## $ fertility &amp;lt;dbl&amp;gt; 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,…
+## $ childMort &amp;lt;dbl&amp;gt; 469, 469, 469, 469, 469, 469, 470, 470, 470, 470, 470, 470,…
+## $ lifeExp   &amp;lt;dbl&amp;gt; 28.2, 28.2, 28.2, 28.2, 28.2, 28.2, 28.1, 28.1, 28.1, 28.1,…
+## $ pop       &amp;lt;dbl&amp;gt; 3280000, 3280000, 3280000, 3280000, 3280000, 3280000, 32800…
+## $ gdpPercap &amp;lt;dbl&amp;gt; 603, 603, 603, 603, 603, 603, 603, 603, 603, 603, 604, 604,…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ce jeu de données dispose de deux nouvelles variables par rapport au package &lt;code&gt;gapminder&lt;/code&gt;.
+- &lt;code&gt;childMort&lt;/code&gt; le nombre d’enfants âgés de moins de 5 ans morts pour 1 000 naissances ;
+- &lt;code&gt;fertility&lt;/code&gt; le nombre d’enfants par femme.&lt;/p&gt;
+&lt;p&gt;Faisons quelques graphiques animés ! Tout d’abord, je veux recréer l’un des graphiques animés les plus connus : commençons avec l’espérence de vie à la naissance en fonction du revenu.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_1 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size(name = &amp;quot;Population&amp;quot;) +
+  scale_x_log10() +
+  labs(x = &amp;quot;log10($ GDP per capita)&amp;quot;,
+       y = &amp;quot;Life expectancy&amp;quot;,
+       title = paste(&amp;quot;Espérance de vie ~ log10(PIB par habitant en $) - Année:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_1, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pour animer le graphique, j’utilise simplement la fonction &lt;code&gt;gganimate::transition_time()&lt;/code&gt; qui permet d’animer le graphique pour chaque valeur de la variable &lt;code&gt;gapminder$year&lt;/code&gt;. De plus cette fonction donne accès à une nouvelle variable &lt;code&gt;frame_time&lt;/code&gt; qui permet de savoir quelle valeur de &lt;code&gt;gapminder$year&lt;/code&gt; est actuellement affiché à l’écran. J’utilise cette variable dans la fonction &lt;code&gt;ggplot2::title()&lt;/code&gt;. Pour animer le tout, j’utilise la fonction &lt;code&gt;gganimate::animate()&lt;/code&gt; qui prend comme argument un objet &lt;code&gt;gganim&lt;/code&gt; et qui me permet de choisir le nombre d’images par seconde affiché dans le rendu final.&lt;/p&gt;
+&lt;p&gt;Maintenant, intéressons nous à la fertilité en fonction du revenu.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_2 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = fertility)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size(name = &amp;quot;Population&amp;quot;) +
+  scale_x_log10() +
+  labs(x = &amp;quot;log10(PIB par habitant en $)&amp;quot;,
+       y = &amp;quot;Nombre d&amp;#39;enfants par femme&amp;quot;,
+       title = paste(&amp;quot;Fertilité ~ log10(PIB par habitant en $) - Année:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_1, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Super ! La fertilité continu de décroitre alors que le PIB par habitant ne cèsse d’augmnenter. Est-ce que nous devons toujours nous attendre à ce que la &lt;em&gt;population bomb&lt;/em&gt; explose ? Maintenant, intéressons nous à la mortalité infantile en fonction du PIB.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_3 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = childMort)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size(name = &amp;quot;Population&amp;quot;) +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(x = &amp;quot;log10(PIB par habitant en $)&amp;quot;,
+       y = &amp;quot;log10(Child mortality per 1,000 babies)&amp;quot;,
+       title = paste(&amp;quot;log10(Mortalité infantile) ~ log10(PIB par habitant en $) - Année:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_3, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;De nombreux autres graphiques sont possible avec ce jeu de donnée. Avec &lt;code&gt;gganimate&lt;/code&gt;, quelques lignes de codes suffisent pour annimer des données et rendre hommage à Hans Roseling.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

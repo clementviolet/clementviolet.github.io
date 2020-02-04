@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Clément Violet</title>
+    <link>/fr/authors/</link>
+      <atom:link href="/fr/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 07 Apr 2999 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>/fr/authors/</link>
+    </image>
+    
+    <item>
+      <title>admin</title>
+      <link>/fr/authors/admin/</link>
+      <pubDate>Sun, 07 Apr 2999 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/admin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>**Clément Violet**</title>
+      <link>/fr/authors/clement-violet/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/clement-violet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew Macdonald</title>
+      <link>/fr/authors/andrew-macdonald/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/andrew-macdonald/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benjamin Mercier</title>
+      <link>/fr/authors/benjamin-mercier/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/benjamin-mercier/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dominique Gravel</title>
+      <link>/fr/authors/dominique-gravel/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/dominique-gravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gabriel Bergeron</title>
+      <link>/fr/authors/gabriel-bergeron/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/gabriel-bergeron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kevin Cazelles</title>
+      <link>/fr/authors/kevin-cazelles/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/kevin-cazelles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Steve Vissault</title>
+      <link>/fr/authors/steve-vissault/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/steve-vissault/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tad Dallas</title>
+      <link>/fr/authors/tad-dallas/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/tad-dallas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Timothée Poisot</title>
+      <link>/fr/authors/timothee-poisot/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/timothee-poisot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gariel Bergeron</title>
+      <link>/fr/authors/gariel-bergeron/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/gariel-bergeron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thimothée Poisot</title>
+      <link>/fr/authors/thimothee-poisot/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/thimothee-poisot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/fr/authors/clem/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/authors/clem/</guid>
+      <description>&lt;p&gt;Etudiant en Master Modélisation en Ecologie à l&amp;rsquo;université de Rennes 1. Mes centres d&amp;rsquo;intérêt tournent autour de l&#39;écologie marine, des sciences des données et de la plongée ! Je joue avec &lt;em&gt;R&lt;/em&gt;, &lt;em&gt;Python&lt;/em&gt;, &lt;em&gt;SQL&lt;/em&gt; et me convertis un peu plus à &lt;em&gt;Julia&lt;/em&gt; chaque jour.&lt;/p&gt;
+&lt;p&gt;Lorsque je ne me trouve pas derrière mon ordinateur, vous pouvez me trouver à la plage, ou bien sous l&amp;rsquo;eau en train de faire des bulles.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Robert Ford</title>
+      <link>/fr/authors/robert-ford/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/fr/authors/robert-ford/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

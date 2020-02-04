@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dataviz | Dive into Data</title>
+    <link>/fr/tags/dataviz/</link>
+      <atom:link href="/fr/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dataviz</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 08 Sep 2019 19:07:59 +0200</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Dataviz</title>
+      <link>/fr/tags/dataviz/</link>
+    </image>
+    
+    <item>
+      <title>2019 09 08 Gapminder a New Hope</title>
+      <link>/fr/2019/09/08/2019-09-08-gapminder-a-new-hope/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/2019/09/08/2019-09-08-gapminder-a-new-hope/</guid>
+      <description>
+
+
+&lt;p&gt;Hi! Today is a big for me, because I am having a fresh start, so it was important to me to pay a tribute to someone: &lt;a href=&#34;https://en.wikipedia.org/wiki/Hans_Rosling&#34;&gt;Hans Roseling&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A quick recap onto his biography: Hans Roseling was a Swedish medecin and more important to me, a statistician (in fact he was an epidemiologist, but epidemiologists are doing a lot of stats). He started a foundation which aims to help people to a better understanding of statistics.&lt;/p&gt;
+One day during my BSc, I have founded one his Ted talk titled: &lt;em&gt;The best stats you’ve ever seen&lt;/em&gt;. This talk changed the way that I am looking at the world. It has made me more optimistc about future, even if we have a tremedous number of challenge to face off. If you have not watch one of his talk, stop everything and watch it!
+&lt;br&gt;&lt;/br&gt;
+&lt;div style=&#34;max-width:854px&#34;&gt;
+&lt;div style=&#34;position:relative;height:0;padding-bottom:56.25%&#34;&gt;
+&lt;iframe src=&#34;https://embed.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen&#34; width=&#34;854&#34; height=&#34;480&#34; style=&#34;position:absolute;left:0;top:0;width:100%;height:100%&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+His conference totaly blowed my mind, since there I know that I want to use stats to better understant our world. I want to use statisticals methods to get insight into how the marines communities work.&lt;/p&gt;
+&lt;p&gt;Today, I am starting, a new Master degree in Ecological modelling. I would like to thank Hans Roseling, what a better way than using some of Gapminder’s data and making cool animated graph?&lt;/p&gt;
+&lt;p&gt;So let’s do it! I have already tidy a new dataset based on the brilliant Jennifer Bryan &lt;a href=&#34;https://github.com/jennybc/gapminder&#34;&gt;&lt;em&gt;gapminder&lt;/em&gt;&lt;/a&gt; R package. It will be the occasion to show off some &lt;code&gt;gganimate&lt;/code&gt; features!&lt;/p&gt;
+&lt;p&gt;First of all, I load some convinient libraries and my own version of &lt;code&gt;gapminder&lt;/code&gt; dataset.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Attaching packages ──────────────────────────────────────────────── tidyverse 1.2.1 ──&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ── Conflicts ─────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# library(ggforce)
+library(gganimate)
+
+theme_set(theme_bw())
+
+load(&amp;quot;gapminder_data.RData&amp;quot;)
+
+glimpse(gapminder)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Observations: 39,928
+## Variables: 8
+## $ country   &amp;lt;fct&amp;gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan, Af…
+## $ continent &amp;lt;fct&amp;gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, …
+## $ year      &amp;lt;dbl&amp;gt; 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, …
+## $ fertility &amp;lt;dbl&amp;gt; 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, …
+## $ ChildMort &amp;lt;dbl&amp;gt; 469, 469, 469, 469, 469, 469, 470, 470, 470, 470, 470,…
+## $ lifeExp   &amp;lt;dbl&amp;gt; 28.2, 28.2, 28.2, 28.2, 28.2, 28.2, 28.1, 28.1, 28.1, …
+## $ pop       &amp;lt;dbl&amp;gt; 3280000, 3280000, 3280000, 3280000, 3280000, 3280000, …
+## $ gdpPercap &amp;lt;dbl&amp;gt; 603, 603, 603, 603, 603, 603, 603, 603, 603, 603, 604,…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This new dataset has two new variables:
+* &lt;code&gt;childMort&lt;/code&gt; the number of death of children under 5 years per 1,000 births;
+* &lt;code&gt;fertility&lt;/code&gt; the number of children per woman.&lt;/p&gt;
+&lt;p&gt;Let’s do some animated graphs! First, I want to plot the the fertility against the income.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p_1 &amp;lt;- ggplot(gapminder, aes(x = gdpPercap, y = fertility)) +
+  geom_point(aes(color = continent, size = pop)) +
+  scale_color_manual(name = &amp;quot;Continent&amp;quot;, values = gapminder::continent_colors) +
+  scale_size_continuous(guide = FALSE) + # I remove the legend for the size, because of gif animation.
+  labs(x = &amp;quot;$ GDP per capita&amp;quot;,
+       y = &amp;quot;# Children per women&amp;quot;,
+       title = paste(&amp;quot;Year:&amp;quot;, &amp;quot;{round(frame_time, 0)}&amp;quot;)) +
+  transition_time(year)
+
+animate(p_1, fps = 5)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/en/post/2019-09-08-gapminder-a-new-hope/index_files/figure-html/unnamed-chunk-2-1.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

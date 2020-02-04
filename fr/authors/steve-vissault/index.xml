@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Steve Vissault | Clément Violet</title>
+    <link>/fr/authors/steve-vissault/</link>
+      <atom:link href="/fr/authors/steve-vissault/index.xml" rel="self" type="application/rss+xml" />
+    <description>Steve Vissault</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Steve Vissault</title>
+      <link>/fr/authors/steve-vissault/</link>
+    </image>
+    
+    <item>
+      <title>Environmental biases in the study of ecological networks at the planetary scale</title>
+      <link>/fr/publication/ms_mangal_synth/poisot_2020/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/ms_mangal_synth/poisot_2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rmangal: An R package to interact with Mangal database</title>
+      <link>/fr/publication/rmangal_package/vissault_2019/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/rmangal_package/vissault_2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

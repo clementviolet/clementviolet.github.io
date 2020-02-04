@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clément Violet</title>
+    <link>/fr/</link>
+      <atom:link href="/fr/index.xml" rel="self" type="application/rss+xml" />
+    <description>Clément Violet</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>fr-fr</language><lastBuildDate>Sun, 07 Apr 2999 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Clément Violet</title>
+      <link>/fr/</link>
+    </image>
+    
+    <item>
+      <title>Publications</title>
+      <link>/fr/publication/</link>
+      <pubDate>Sun, 07 Apr 2999 00:00:00 +0000</pubDate>
+      <guid>/fr/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/fr/talk/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>/fr/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>/fr/post/</link>
+      <pubDate>Sun, 08 Sep 2019 19:07:59 +0200</pubDate>
+      <guid>/fr/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contents</title>
+      <link>/fr/content/</link>
+      <pubDate>Sun, 08 Sep 2019 19:03:43 +0200</pubDate>
+      <guid>/fr/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>/fr/archive/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/archive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/fr/slides/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/fr/slides/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/fr/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/fr/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/fr/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/fr/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/fr/project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/fr/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Courses</title>
+      <link>/fr/courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/fr/courses/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
